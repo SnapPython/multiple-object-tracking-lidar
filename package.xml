@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<package>
-  <name>multi_object_tracking_lidar</name>
+<package format="2">
+  <name>multiple_object_tracking_lidar</name>
   <version>1.0.4</version>
   <description>ROS package for Multiple objects detection, tracking and classification from LIDAR scans/point-clouds</description>
 
@@ -40,24 +40,23 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>pcl_ros</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>visualization_msgs</build_depend>
-  <build_depend>libpcl-all-dev</build_depend>
-  <build_depend>cv_bridge</build_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <run_depend>libpcl-all</run_depend>
-  <run_depend>pcl_ros</run_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>visualization_msgs</run_depend>
-  <run_depend>cv_bridge</run_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <depend>pcl_ros</depend>
+  <depend>sensor_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>libpcl-all-dev</depend>
+  <depend>cv_bridge</depend>
+  <depend>libpcl-all</depend>
+  <depend>rclcpp</depend>
+
 
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
-
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
